@@ -5,11 +5,6 @@
 
 #include "DiscGalerkin.h"
 
-// to do:
-// 1. double check stiffness matrix calculation
-// 2. define gaussian quadrature (integration function) for stiffness matrix (sum of solution nodes * weights)
-// 6.
-
 // constant global variables
 static const double a {0.5};
 static const double xMin {0};
@@ -34,7 +29,6 @@ double mapAffine(const double& x, const double& xL, const double& xR)
 {
     return 2 * ((x - xL) / (xR - xL)) - 1;
 }
-
 
 //template <size_t K> // size_t Np> // k x Np grid
 class Grid {
